@@ -12,7 +12,7 @@ import os
 
 # --- Configuration ---
 # Set the filename for the uploaded dataset
-DATASET_FILENAME = "https://github.com/Purvarty/NEURO-DIABETES-PREDICTIVE-ANALYZER/blob/main/diabetes_young_adults_india.csv"
+DATASET_FILENAME = "diabetes_young_adults_india.csv"
 TARGET_COLUMN = 'Diabetes_Type' # The column we are trying to predict
 
 # Check if the dataset file exists in the current environment
