@@ -198,31 +198,6 @@ with tab2:
 
     st.divider()
     
-    # Row 2: Correlation Scatter Plot
-    st.subheader("Correlation Matrix (Scatter)")
-    col3_2, col4_2 = st.columns(2)
-    
-    numerical_cols = ['Age', 'BMI', 'Fasting_Blood_Sugar', 'HbA1c', 'Cholesterol_Level', 'Sleep_Hours', 'Screen_Time']
-    
-    with col3_2:
-        x_axis = st.selectbox("Select X-Axis", options=numerical_cols, index=1)
-    with col4_2:
-        y_axis = st.selectbox("Select Y-Axis", options=numerical_cols, index=3)
-        
-    fig_scatter = px.scatter(
-        df_filtered,
-        x=x_axis,
-        y=y_axis,
-        color='Prediabetes',
-        hover_data=['Gender', 'Region'],
-        title=f'{y_axis} vs {x_axis}',
-        template="plotly_dark",
-        color_discrete_map={'Yes': '#FF00FF', 'No': '#00FF00'}
-    )
-    fig_scatter.update_layout(height=500)
-    st.plotly_chart(fig_scatter, use_container_width=True)
-
-
 # --- TAB 3: PREDICTION SIMULATOR ---
 with tab3:
     st.header("Patient Outcome Simulation 🧠")
