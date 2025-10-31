@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
+import plotly.express as px # CORRECTED: Changed 'ploty.express' to 'plotly.express'
 from sklearn.preprocessing import LabelEncoder
 # NOTE: The actual model (e.g., Keras/TensorFlow) trained in your
 # welcome_to_colab.py would be loaded here. For this demo,
